@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CompareUtil.Test
-{
+namespace CompareUtil.Test {
+
     [TestClass]
-    public class UtilTest
-    {
+    public class UtilTest {
+
         Util _util = null;
 
         [TestInitialize]
