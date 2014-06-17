@@ -14,7 +14,7 @@ namespace CompareUtil.Test {
         }
 
         [TestCleanup]
-        public void UtilTestSetup() {
+        public void UtilTestCleanup() {
             _util = null;
         }
 
@@ -37,7 +37,7 @@ namespace CompareUtil.Test {
         [TestMethod]
         [TestCategory("Unit")]
         [ExpectedException(typeof(NullReferenceException))]
-        public void ComparingNullAndEmpty_ExpectingException() {
+        public void ComparingNullAndEmpty_ExpectingNullReferenceException() {
 
             var result = _util.Compare(null as string, string.Empty);
             Assert.AreEqual(result, false);
