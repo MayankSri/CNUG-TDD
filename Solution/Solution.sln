@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompareUtil", "CompareUtil\CompareUtil.csproj", "{5C776251-530B-4E99-ABA9-4D0A1A545342}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoService", "DemoService\DemoService.csproj", "{5C776251-530B-4E99-ABA9-4D0A1A545342}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompareUtil.Test", "CompareUtil.Test\CompareUtil.Test.csproj", "{226904F7-A454-454A-BC17-A49F74FA7E17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoService.Test", "DemoService.Test\DemoService.Test.csproj", "{226904F7-A454-454A-BC17-A49F74FA7E17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
