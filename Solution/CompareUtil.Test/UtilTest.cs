@@ -6,11 +6,16 @@ namespace CompareUtil.Test {
     [TestClass]
     public class UtilTest {
 
-        Util _util = null;
+        private Util _util = null;
 
         [TestInitialize]
         public void UtilTestSetup() {
             _util = new Util();
+        }
+
+        [TestCleanup]
+        public void UtilTestSetup() {
+            _util = null;
         }
 
         [TestMethod]
