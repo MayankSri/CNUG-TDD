@@ -24,7 +24,7 @@ namespace CompareUtil.Test {
             _mockCustomerRepository.Setup(vr => vr.Get(It.IsAny<int>()))
                                 .Returns(new Customer {
                                     DiscountRate = 0,
-                                    IsPreferredVendor = true,
+                                    IsGoldMember = true,
                                     TotalDue = 100m,
                                     TotalPaid = 0m
                                 });
@@ -41,10 +41,10 @@ namespace CompareUtil.Test {
             _mockCustomerRepository.Setup(vr => vr.Get(It.IsInRange<int>(0, int.MaxValue, Range.Exclusive)))
                                 .Returns(new Customer {
                                     Id = 123,
-                                    DiscountRate = 0,
-                                    IsPreferredVendor = true,
+                                    IsGoldMember = true,
                                     TotalDue = 100m,
-                                    TotalPaid = 0m
+                                    TotalPaid = 0m,
+                                    DiscountRate = 0
                                 });
             _mockCustomerRepository.Setup(vr => vr.UpdateDiscount(123, 0.04m, 96m)).Verifiable();
 

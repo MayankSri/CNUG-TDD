@@ -16,21 +16,21 @@ namespace CompareUtil {
 
         public decimal GetAccountBalance(int vendorId) {
 
-            var vendor = _customerRepository.Get(vendorId);
-            HandleNull(vendor);
-            return vendor.TotalDue - vendor.TotalPaid;
+            var customer = _customerRepository.Get(vendorId);
+            HandleNull(customer);
+            return customer.TotalDue - customer.TotalPaid;
         }
 
-        public void ApplyEarlyPaymentDiscount(int vendorId, decimal discountRate) {
+        public void ApplyEarlyPaymentDiscount(int customerId, decimal discountRate) {
 
-            var vendor = _customerRepository.Get(vendorId);
-            HandleNull(vendor);
+            var customer = _customerRepository.Get(customerId);
+            HandleNull(customer);
 
-            if (!vendor.IsPreferredVendor)
+            if (!customer.IsGoldMember)
                 return;
 
-            var balance = vendor.TotalDue - discountRate * vendor.TotalDue;
-            _customerRepository.UpdateDiscount(vendorId, discountRate, balance);
+            var balance = customer.TotalDue - discountRate * customer.TotalDue;
+            _customerRepository.UpdateDiscount(customerId, discountRate, balance);
         }
 
     }

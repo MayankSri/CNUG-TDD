@@ -9,7 +9,7 @@ namespace CompareUtil {
         public int Id { get; set; }
         public decimal TotalPaid { get; set; }
         public decimal TotalDue { get; set; }
-        public bool IsPreferredVendor { get; set; }
+        public bool IsGoldMember { get; set; }
         public decimal DiscountRate { get; set; }
     }
 }
